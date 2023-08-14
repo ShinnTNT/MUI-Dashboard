@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import navlinks from "../../assets/navlinks";
-import useCurrentNav from "../../hooks/useCurrentNav";
+import navlinks from "../assets/navlinks";
+import useCurrentNav from "../hooks/useCurrentNav";
 import { useTheme } from "@emotion/react";
 import { useEffect, useState } from "react";
 
@@ -21,16 +21,14 @@ const Sidebar = () => {
       setActiveLink({
         index:
           (navlinks &&
-            navlinks[activeTab].findIndex((item) => item === currentNav)) ||
+            navlinks[activeTab].findIndex(
+              (item) => item.label === currentNav.label
+            )) ||
           0,
         color: currentNav.color,
       });
     }
   }, [currentNav, activeTab]);
-
-  useEffect(() => {
-    console.log(activeLink);
-  }, [activeLink]);
 
   return (
     <Box width={200} height="100%">

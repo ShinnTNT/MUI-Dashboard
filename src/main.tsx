@@ -21,6 +21,9 @@ const theme = createTheme({
     secondary: "#F3F6F9",
     main: "#F5F6FA",
   },
+  Error: {
+    main: "#FF4D4D",
+  },
 });
 
 declare module "@mui/material/styles" {
@@ -28,6 +31,9 @@ declare module "@mui/material/styles" {
     WHITE: {
       light: string;
       secondary: string;
+      main: string;
+    };
+    Error: {
       main: string;
     };
   }
@@ -38,6 +44,9 @@ declare module "@mui/material/styles" {
       secondary?: string;
       main?: string;
     };
+    Error?: {
+      main?: string;
+    };
   }
 }
 
@@ -46,9 +55,9 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <RouterProvider router={router} />
+  </ThemeProvider>
+  // </React.StrictMode>
 );

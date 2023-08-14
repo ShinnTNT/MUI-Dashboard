@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Header from "./Header";
 import { Typography, useTheme } from "@mui/material";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import LoadScreen from "../components/LoadScreen";
