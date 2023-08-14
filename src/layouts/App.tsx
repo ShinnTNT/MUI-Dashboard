@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
 import Header from "./Header";
-import { Typography, useTheme } from "@mui/material";
-import Sidebar from "./Sidebar";
+import { useTheme } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 import LoadScreen from "../components/LoadScreen";
+import Sidebar from "./Sidebar";
 
 const App = () => {
   const theme = useTheme();

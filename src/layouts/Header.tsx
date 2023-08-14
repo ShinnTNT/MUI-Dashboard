@@ -1,7 +1,7 @@
 import CustomAppBar from "./components/CustomAppBar";
 import { Avatar, Box, Grid, IconButton, Typography } from "@mui/material";
 
-import Logo from "../assets/08_Supreme.jpg";
+import Logo from "@/assets/img/illustrations/08_Supreme.jpg";
 import Link from "./components/Link";
 import {
   Activity,

@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import navlinks from "../assets/navlinks";
-import useCurrentNav from "../hooks/useCurrentNav";
 import { useTheme } from "@emotion/react";
 import { useEffect, useState } from "react";
+import useCurrentNav from "../hooks/useCurrentNav";
+import navlinks from "../assets/navlinks";
 
 interface ActiveLink {
   index: number;

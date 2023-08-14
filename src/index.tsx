@@ -6,16 +6,14 @@ import BlockedConversation from "./pages/conversation/blocked";
 import CurrentUsers from "./pages/campaign/current-user";
 import MonthlyUsers from "./pages/campaign/monthly-user";
 import GeneralError from "./layouts/components/GeneralError";
+import App from "./layouts/App";
+import NotFound from "./layouts/components/NotFound";
 
 export default function Index() {
   return (
     <Suspense fallback={<LoadScreen />}>
       <Routes>
-        <Route
-          path="/"
-          element={<GeneralError />}
-          errorElement={<GeneralError />}
-        >
+        <Route path="/" element={<App />} errorElement={<GeneralError />}>
           {/* Conversation Tab */}
           <Route path="all-conversation" element={<AllConversation />} />
           <Route
@@ -27,6 +25,9 @@ export default function Index() {
           <Route path="current-users" element={<CurrentUsers />} />
           <Route path="monthly-users" element={<MonthlyUsers />} />
         </Route>
+
+        {/* Not Found */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );
