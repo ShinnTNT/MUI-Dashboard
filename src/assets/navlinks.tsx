@@ -5,7 +5,6 @@ export interface NavLink {
   label: string;
   title: string;
   icon: React.ReactNode;
-  color: string;
 }
 
 export interface NavLinks {
@@ -16,34 +15,30 @@ export interface NavLinks {
 const navlinks: NavLinks = {
   conversation: [
     {
-      link: "all-conversation",
+      link: "conversation/all-conversation",
       label: "All",
       title: "All",
-      icon: <Message2 color="#3F80FF" variant="Bold" />,
-      color: "#3F80FF",
+      icon: <Message2 size={20} variant="Outline" />,
     },
     {
-      link: "blocked-conversation",
+      link: "conversation/blocked-conversation",
       label: "Blocked",
       title: "Blocked",
-      icon: <HeartSlash color="#FF4D4D" variant="Bold" />,
-      color: "#FF4D4D",
+      icon: <HeartSlash size={20} variant="Outline" />,
     },
   ],
   campaign: [
     {
-      link: "current-users",
+      link: "campaign/current-users",
       label: "Current Users",
       title: "Current Users",
-      icon: <UserSquare color="#dada" variant="Bold" />,
-      color: "#B92242",
+      icon: <UserSquare variant="Bold" />,
     },
     {
-      link: "monthly-users",
+      link: "campaign/monthly-users",
       label: "Monthly Users",
       title: "Monthly Users",
-      icon: <UserOctagon color="#dada" variant="Bold" />,
-      color: "#B92242",
+      icon: <UserOctagon variant="Bold" />,
     },
   ],
 };

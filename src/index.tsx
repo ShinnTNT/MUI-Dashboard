@@ -15,15 +15,23 @@ export default function Index() {
       <Routes>
         <Route path="/" element={<App />} errorElement={<GeneralError />}>
           {/* Conversation Tab */}
-          <Route path="all-conversation" element={<AllConversation />} />
           <Route
-            path="blocked-conversation"
+            index
+            path="conversation/all-conversation"
+            element={<AllConversation />}
+          />
+          <Route
+            path="conversation/blocked-conversation"
             element={<BlockedConversation />}
           />
 
           {/* Campaign Tab  */}
-          <Route path="current-users" element={<CurrentUsers />} />
-          <Route path="monthly-users" element={<MonthlyUsers />} />
+          <Route
+            index
+            path="campaign/current-users"
+            element={<CurrentUsers />}
+          />
+          <Route path="campaign/monthly-users" element={<MonthlyUsers />} />
         </Route>
 
         {/* Not Found */}
