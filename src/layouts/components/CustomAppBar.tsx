@@ -1,5 +1,4 @@
-import { AppBar, useTheme } from "@mui/material";
-import { styled } from "@mui/system";
+import { AppBar, styled, useTheme } from "@mui/material";
 
 const CustomAppBar = styled(AppBar)(() => {
   const theme = useTheme();

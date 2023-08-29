@@ -1,5 +1,5 @@
+import { styled } from "@mui/material";
 import Box, { BoxProps } from "@mui/material/Box";
-import { styled } from "@mui/system";
 
 interface CustomBoxProps extends BoxProps {
   active?: boolean;
